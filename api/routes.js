@@ -6,9 +6,22 @@ router.get('/notes',(req,res)=> {
     res.json(notes)
 })
 router.post('/notes',(req,res)=>{
-    notes.push(req.body)
+    let mynumber = Math.floor(Math.random()*100)
+    const newnote = {
+        title:req.body.title,
+        text:req.body.text,
+        id:mynumber
+
+    }
+    notes.push(newnote)
     console.log(req)
     fs.writeFile('db/db.json', JSON.stringify(notes), (err) =>
      err ? console.error(err) : console.log('Success!'))
 })
 module.exports=router
+const newFeedback = {
+    email,
+    feedbackType,
+    feedback,
+    feedback_id: Math.random()
+  };
