@@ -19,9 +19,3 @@ router.post('/notes',(req,res)=>{
      err ? console.error(err) : console.log('Success!'))
 })
 module.exports=router
-const newFeedback = {
-    email,
-    feedbackType,
-    feedback,
-    feedback_id: Math.random()
-  };
